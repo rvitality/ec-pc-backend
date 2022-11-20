@@ -3,3 +3,5 @@ Gunicorn
 pandas
 numpy
 scikit-learn
+statsmodels
+itertools
