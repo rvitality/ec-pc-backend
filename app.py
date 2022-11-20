@@ -6,6 +6,11 @@ from sarima_prediction import predict_rate
 app = Flask(__name__)
 
 
+@app.route("/")
+def hello_world():
+    return "Hello, World!"
+
+
 @app.route("/get_sarima_rate")
 def get_sarima_rate():
     forecast = predict_rate()
@@ -61,8 +66,8 @@ def push_official_rate():
         return next_month_predicted_rate
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
 
 # with open("official_rates.csv", "r") as rates:
